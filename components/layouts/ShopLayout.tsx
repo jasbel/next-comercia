@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { ReactNode } from "react";
-import { Navbar } from "../ui";
+import { Navbar, SideMenu } from "../ui";
 
 interface Props {
   title: string;
@@ -21,7 +21,7 @@ export const ShopLayout = ({ title, description, urlImg, children }: Props) => {
         {urlImg && <meta name="og:image" content={urlImg} />}
       </Head>
       <nav><Navbar /></nav>
-      {/* TODO: Sidebar */}
+      <SideMenu />
       <main style={{ margin: "80px auto", maxWidth: "1440px", padding: "0px 30px" }}>{children}</main>
       {/* FOOTER */}
       <footer>{/* TODO: custom footer */}</footer>
