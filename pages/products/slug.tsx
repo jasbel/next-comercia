@@ -3,6 +3,8 @@ import React from "react";
 import Flex from "../../common/atoms/Flex";
 import { ShopLayout } from "../../components/layouts";
 import { ProductSlideshow } from "../../components/products";
+import { SizeSelector } from "../../components/products/SizeSelector";
+import { ItemCounter } from "../../components/ui";
 import { initialData } from "../../database/products";
 
 const product = initialData.products[0];
@@ -26,6 +28,8 @@ const ProducPage = () => {
 
             <Box sx={{ my: 2 }}>
               <Typography variant="subtitle2">Cantidad</Typography>
+              <ItemCounter />
+              <SizeSelector selectedSize={product.sizes[0]} sizes={product.sizes} />
             </Box>
 
             <Button color="secondary" className="circular-btn">
